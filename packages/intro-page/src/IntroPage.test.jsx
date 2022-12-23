@@ -7,6 +7,8 @@ import Profile from './img/Profile.png'
 
 describe("Tests for IntroPage", () => {
 
+    const aboutText = 'Hello there! My name is Ethan Domingo'
+
     it('Should contain main profile image', async () => {
         render(
             <DependenciesContext.Provider value={{Profile}}>
@@ -14,8 +16,16 @@ describe("Tests for IntroPage", () => {
             </DependenciesContext.Provider>
         )
         const profileImage = screen.getByRole('img');
-        console.log(profileImage);
         expect(profileImage).toHaveProperty('alt', 'ProfilePic');
-        expect(profileImage).toHaveProperty('src', '/src/img/Profile.png');
-    })
+    });
+
+    it('Should contain Intro Text', async () => {
+        render(
+            <DependenciesContext.Provider value={{Profile}}>
+                <IntroPage />
+            </DependenciesContext.Provider>
+        )
+        const profileImage = screen.getByText(aboutText);
+        expect(profileImage).toBeTruthy();
+    });
 })
