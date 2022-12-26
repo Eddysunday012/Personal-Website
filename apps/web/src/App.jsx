@@ -7,7 +7,6 @@ import Profile from './assets/Profile.png'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <DependenciesContext.Provider value={{Profile}}>
