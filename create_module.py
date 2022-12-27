@@ -36,19 +36,25 @@ package_json_info = {
     "main": "src/index.js",
     "license": "MIT",
     "scripts": {
-        "test": "jest --passWithNoTests"
+        "test": "vitest run --coverage --passWithNoTests"
     },
     "jest": {
         "collectCoverage": True
     },
     "babel": {
         "presets": [
-            "@babel/preset-env"
+            "@babel/preset-env",
+            "@babel/preset-react"
         ]
     },
     "devDependencies": {
         "@babel/preset-env": "^7.19.4",
         "@babel/core": "^7.19.3",
+        "@babel/preset-react": "^7.18.6",
+        "@testing-library/user-event": "^14.4.3",
+        "@vitejs/plugin-react": "^2.2.0",
+        "vitest": "^0.24.3",
+        "jsdom": "^20.0.1",
         "jest": "^29.1.2"
     }
 }
@@ -95,6 +101,23 @@ for module in input_modules:
         package_json_info["devDependencies"][module] = "*"
 
 pathlib.Path(f"packages/{module_name}/src").mkdir(parents=True, exist_ok=True)
+
+with open(f"packages/{module_name}/vite.config.js", "w") as vite_config_file:
+    viteFileTxt = """import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  plugins: [react()],
+  test: {
+    globals: true,
+    environment: "jsdom",
+    deps: {
+      fallbackCJS: true,
+    },
+  },
+});
+"""
+    vite_config_file.write(viteFileTxt)
 
 with open(f"packages/{module_name}/package.json", "w") as manifest_file:
     json.dump(package_json_info, manifest_file, indent=2)
