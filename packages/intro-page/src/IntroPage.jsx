@@ -1,6 +1,6 @@
 import React from "react";
 import { DependenciesContext } from "dependenciescontext";
-import { Typography, Grid, Box, Fade } from "@mui/material";
+import { Typography, Grid, Box, Fade, Container } from "@mui/material";
 
 
 export const IntroPage = () => {
@@ -28,22 +28,24 @@ export const IntroPage = () => {
                 alignItems: 'center',
             }}
             >
-                <Fade in={fadeIn} timeout={2000}>
-                    <Grid container justifyContent="center">
-                        <Grid item xs={3}>
-                            <img style={ImageMyStyle} src={Profile} alt="ProfilePic" />
+                <Container>
+                    <Fade in={fadeIn} timeout={2000}>
+                        <Grid container justifyContent="center">
+                            <Grid item xs={3}>
+                                <img style={ImageMyStyle} src={Profile} alt="ProfilePic" />
+                            </Grid>
+                            <Grid item xs={5} style={{justifyContent:'center', display:'flex', flexDirection:'column'}}>
+                                <Typography align="center" variant="h5" width='100%'>
+                                    Hello there! My name is Ethan Domingo
+                                </Typography>
+                                <Typography align="center" variant="body1" width='100%'>
+                                    I'm a software engineer based in Santa Cruz, CA.
+                                    Scroll down to learn more about me!
+                                </Typography>
+                            </Grid>
                         </Grid>
-                        <Grid item xs={5} style={{justifyContent:'center', display:'flex', flexDirection:'column'}}>
-                            <Typography align="center" variant="h5" width='100%'>
-                                Hello there! My name is Ethan Domingo
-                            </Typography>
-                            <Typography align="center" variant="body1" width='100%'>
-                                I'm a software engineer based in Santa Cruz, CA.
-                                Scroll down to learn more about me!
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                </Fade>
+                    </Fade>
+                </Container>
             </Box>
             )}
         </DependenciesContext.Consumer> 

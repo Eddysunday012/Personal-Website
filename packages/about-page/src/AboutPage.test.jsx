@@ -14,7 +14,7 @@ describe('Tests for About Page', () => {
         render(
             <AboutPage />
         )
-        const findBox = screen.getByLabelText('About');
+        const findBox = screen.getByLabelText('About Me');
         expect(findBox).toBeTruthy();
     })
 })
