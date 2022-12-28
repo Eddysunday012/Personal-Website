@@ -8,7 +8,7 @@ import {
 export const AboutPage = () => {
     return (
         <Container>
-            <Box sx={{backgroundColor: 'grey', borderRadius: '10px'}} aria-label='About Me'>
+            <Box sx={{backgroundColor: '#bab8b8', borderRadius: '10px'}} aria-label='About Me'>
                 <Container sx={{p: 1}}>
                     <Typography variant="h5" sx={{ pt: 1, pb: 1}}>
                         About Me
