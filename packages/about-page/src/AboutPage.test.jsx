@@ -16,5 +16,5 @@ describe('Tests for About Page', () => {
         )
         const findBox = screen.getByLabelText('About Me');
         expect(findBox).toBeTruthy();
-    })
+    });
 })
