@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import { Menu } from "Menu";
 import { DependenciesContext } from 'dependenciescontext';
 import { IntroPage } from 'intro-page';
