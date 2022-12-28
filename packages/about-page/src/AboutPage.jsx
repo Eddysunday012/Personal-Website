@@ -7,7 +7,7 @@ import {
 
 export const AboutPage = () => {
     return (
-        <Container>
+        <Container sx={{mb: 2, mt: 2}}>
             <Box sx={{backgroundColor: '#bab8b8', borderRadius: '10px'}} aria-label='About Me'>
                 <Container sx={{p: 1}}>
                     <Typography variant="h5" sx={{ pt: 1, pb: 1}}>

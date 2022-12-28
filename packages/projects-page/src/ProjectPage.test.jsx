@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { DependenciesContext } from "dependenciescontext";
-import { ComputerIcon } from '@mui/icons-material';
+import {act} from 'react-dom/test-utils';
 import { ProjectPage } from "./ProjectPage";
 
 const projects = [
@@ -62,7 +62,7 @@ describe('Tests for Project Page', () => {
             </DependenciesContext.Provider>
         )
         const mainProjectLabel = screen.getByLabelText('Projects');
-        const projectLabel = screen.getByLabelText('project0');
+        const projectLabel = screen.getByLabelText('project1');
         expect(mainProjectLabel).toBeTruthy();
         expect(projectLabel).toBeTruthy();
 

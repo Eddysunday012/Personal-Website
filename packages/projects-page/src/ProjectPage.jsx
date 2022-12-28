@@ -26,7 +26,13 @@ export const ProjectPage = () => {
                 alignItems='stretch'
                 sx={{backgroundColor: '#919090', borderRadius:'14px', height: '100%'}}
                 >
-                    <Container style={{alignItems: 'center',justifyContent: 'center', display: 'flex', flexDirection: 'column'}}>
+                    <Container
+                    style={{
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        display: 'flex',
+                        flexDirection: 'column'
+                    }}>
                         <Typography variant="body1" sx={{p: 1}}>
                             {project['Name']}
                         </Typography>
@@ -47,7 +53,7 @@ export const ProjectPage = () => {
     return(
         <DependenciesContext.Consumer>
             {({projects}) => (
-                <Container>
+                <Container sx={{mt: 2, mb: 2}}>
                     <Box aria-label='Projects' sx={{backgroundColor: '#bab8b8', borderRadius:'12px', p: 1}}>
                         <Container sx={{p: 1}}>
                             <Typography variant="h5" sx={{pb: 1}}>
@@ -57,7 +63,7 @@ export const ProjectPage = () => {
                                 {projects.map((project, index) => 
                                     <ProjectBox 
                                     project={project}
-                                    label={'project1'}
+                                    label={`project${index}`}
                                     key={`project${index}`}
                                     />
                                 )}
