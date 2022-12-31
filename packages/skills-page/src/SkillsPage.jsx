@@ -5,9 +5,9 @@ import {
     Grid,
     Box,
     Container,
-    List,
-    ListItem,
-    ListItemText,
+    // List,
+    // ListItem,
+    // ListItemText,
     LinearProgress,
     Chip
 } from '@mui/material'
@@ -15,13 +15,13 @@ import {
 
 const SkillSection = ({Skill}) => {
     return (
-        <ListItemText>
+        <Container sx={{m:1}}>
             <Typography variant="body1" sx={{p: 1}}>
                 {Skill.Name}
             </Typography>
-            <LinearProgress variant="determinate" value={Skill.Percentage} sx={{m:1}} />
+            <LinearProgress variant="determinate" value={Skill.Percentage} sx={{m:1, p: 0.1}} />
             <Chip label={Skill.Type} sx={{mt:2}} size="small" />
-        </ListItemText>
+        </Container>
     )
 }
 
@@ -31,18 +31,18 @@ export const SkillsPage = () => {
         <DependenciesContext.Consumer>
             {({Skills}) => (
                 <Container sx={{mt: 2, mb: 2}}>
-                    <Box aria-label='Projects' sx={{backgroundColor: '#bab8b8', borderRadius:'12px', p: 1}} maxWidth="50%">
+                    <Box aria-label='Projects' sx={{backgroundColor: '#bab8b8', borderRadius:'12px', p: 1}}>
                         <Container sx={{p: 1}}>
-                            <Typography variant="h5" sx={{pb: 1}}>
+                            <Typography variant="h5" sx={{pb: 1}} align="center">
                                     Skills
                             </Typography>
-                            <List>
+                            <Grid container>
                                 {Skills.map((Skill, index) => 
-                                <ListItem key={`Skill${index}`}>
+                                <Grid item key={`Skill${index}`} xs={6}>
                                     <SkillSection Skill={Skill} />
-                                </ListItem>
+                                </Grid>
                                 )}
-                            </List>
+                            </Grid>
                         </Container>
                     </Box>
                 </Container>
