@@ -1,73 +1,37 @@
-# Turborepo starter
+# Ethan Domingo's Personal Website
 
-This is an official Yarn v1 starter turborepo.
+My very own personal website!
 
-## What's inside?
+## What is this?
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. It includes the following packages/apps:
+In short, this is a personal website I have created that is designed to go hand in hand with my resume.
 
-### Apps and Packages
+## Setting up
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+The fully functioning site can be found here through this link:
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+(Not finished yet, but will have the link once deployed!)
 
-### Utilities
+To run this on a local machine, follow these primary steps for setup
 
-This turborepo has some additional tools already setup for you:
+0. Have Python 3.6+ and Java 11+
+1. Install Node.js (v16.18.1) and npm
+2. Install Yarn: `npm install --global yarn`
+3. Install npm dependencies: `yarn`
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## Project Structure
 
-### Build
+This project uses [Turborepo](https://turborepo.org/) to help facilitate and create a hyper-modularized codebase. This means creating many local npm modules to build, iterate, and test features in complete isolation.
 
-To build all apps and packages, run the following command:
+_NOTE_: Turborepo supports a monorepo structure, which is what the website's architecture is based off of. It is _extremely_ overkill for the needs of the current state of this project, however I modeled it this way in case for possible larger expansion in the future.
 
-```
-cd my-turborepo
-yarn run build
-```
+## Technologies
 
-### Develop
+In no particular order:
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- JavaScript
+- React
+- Chakra UI
+- npm, yarn, turborepo
+- Vitest
+- Prettier (code styling)
