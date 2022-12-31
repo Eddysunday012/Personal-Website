@@ -10,7 +10,7 @@ In short, this is a personal website I have created that is designed to go hand 
 
 The fully functioning site can be found here through this link:
 
-(Not finished yet, but will have the link once deployed!)
+[(Not yet deployed, but will have the link once deployed! Enjoy this link to my actual resume for now :))](https://drive.google.com/file/d/1zV0kPQiyrihOHfKjWvvLu1_F07zzshCx/view?usp=sharing)
 
 To run this on a local machine, follow these primary steps for setup
 
