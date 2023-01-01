@@ -2,17 +2,26 @@ import React from "react";
 import {
     AppBar,
     Toolbar,
-    Typography
+    Typography,
+    Container,
+    Box
 } from "@mui/material";
+import { DependenciesContext } from "dependenciescontext";
 
 export const Footer = () => {
     return (
-        <AppBar position="static" color="primary" aria-label="Footer">
-            <Toolbar>
-                <Typography variant="h6" color="inherit">
-                My Footer
-                </Typography>
-            </Toolbar>
-        </AppBar>
+        <DependenciesContext.Consumer>
+            {() =>
+                <footer>
+                    <AppBar position="absolute" color="primary" aria-label="Footer" style={{bottom: 0, display: 'flex', maxWidth: '960px', margin: '0 auto'}}>
+                        <Box maxHeight={'10%'}>
+                            <Typography>
+                                Ethan Domingo
+                            </Typography>
+                        </Box>
+                    </AppBar>
+                </footer>
+            }
+        </DependenciesContext.Consumer>
     )
 }

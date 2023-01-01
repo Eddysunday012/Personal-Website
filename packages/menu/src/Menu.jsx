@@ -31,36 +31,38 @@ export const Menu = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <AppBar sx={{minHeight: 70}} aria-label="Navbar" className="Navbar" justifyContent="center">
-                <Grid 
-                container
-                spacing={1}
-                alignItems="center"
-                justifyContent={["spaceBetween", "center"]}
-                sx={{margin:"auto"}}
-                >
-                    <Grid item style={{textAlign:"center"}} xs={2}>
-                        <Button variant="text"> 
-                            <Typography align="center">About</Typography> 
-                        </Button>
+            <header>
+                <AppBar sx={{minHeight: 70}} aria-label="Navbar" className="Navbar" justifyContent="center">
+                    <Grid 
+                    container
+                    spacing={1}
+                    alignItems="center"
+                    justifyContent={["spaceBetween", "center"]}
+                    sx={{margin:"auto"}}
+                    >
+                        <Grid item style={{textAlign:"center"}} xs={2}>
+                            <Button variant="text"> 
+                                <Typography align="center">About</Typography> 
+                            </Button>
+                        </Grid>
+                        <Grid item style={{textAlign:"center"}} xs={2}>
+                            <Button variant="text"> 
+                                <Typography align="center">Skills</Typography> 
+                            </Button>
+                        </Grid>
+                        <Grid item style={{textAlign:"center"}} xs={2}>
+                            <Button variant="text"> 
+                                <Typography align="center">Projects</Typography> 
+                            </Button>
+                        </Grid>
+                        <Grid item style={{textAlign:"center"}} xs={2}>
+                            <Button variant="text"> 
+                                <Typography align="center">Contact</Typography> 
+                            </Button>
+                        </Grid>
                     </Grid>
-                    <Grid item style={{textAlign:"center"}} xs={2}>
-                        <Button variant="text"> 
-                            <Typography align="center">Skills</Typography> 
-                        </Button>
-                    </Grid>
-                    <Grid item style={{textAlign:"center"}} xs={2}>
-                        <Button variant="text"> 
-                            <Typography align="center">Projects</Typography> 
-                        </Button>
-                    </Grid>
-                    <Grid item style={{textAlign:"center"}} xs={2}>
-                        <Button variant="text"> 
-                            <Typography align="center">Contact</Typography> 
-                        </Button>
-                    </Grid>
-                </Grid>
-            </AppBar>
+                </AppBar>
+            </header>
         </ThemeProvider>
     )
 }
