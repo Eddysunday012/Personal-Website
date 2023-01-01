@@ -1,4 +1,4 @@
-import { Menu } from "Menu";
+import { Menu } from "menu";
 import { DependenciesContext } from 'dependenciescontext';
 import { IntroPage } from 'intro-page';
 import { AboutPage } from 'about-page';
