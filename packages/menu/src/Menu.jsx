@@ -32,7 +32,7 @@ export const Menu = () => {
     return (
         <ThemeProvider theme={theme}>
             <header>
-                <AppBar sx={{minHeight: 70}} aria-label="Navbar" className="Navbar" justifyContent="center">
+                <AppBar sx={{minHeight: 70}} aria-label="Navbar" className="Navbar" >
                     <Grid 
                     container
                     spacing={1}

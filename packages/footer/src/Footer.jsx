@@ -4,20 +4,51 @@ import {
     Toolbar,
     Typography,
     Container,
-    Box
+    Box,
+    Icon,
+    IconButton,
+    Grid
 } from "@mui/material";
 import { DependenciesContext } from "dependenciescontext";
+import {
+    LinkedIn,
+    GitHub,
+    Mail
+} from "@mui/icons-material";
+
 
 export const Footer = () => {
     return (
         <DependenciesContext.Consumer>
             {() =>
                 <footer>
-                    <AppBar position="absolute" color="primary" aria-label="Footer" style={{bottom: 0, display: 'flex', maxWidth: '960px', margin: '0 auto'}}>
-                        <Box maxHeight={'10%'}>
-                            <Typography>
-                                Ethan Domingo
+                    <AppBar position='sticky' sx={{ top: 'auto', bottom: 0, mt:3 }} alignItems="center">
+                        <Box sx={{p: 3, backgroundColor: '#8ba3c4'}} maxWidth justifyContent={'center'} >
+                            <Typography textAlign='center'>
+                                Copyright © Ethan Domingo
                             </Typography>
+                            <Grid
+                            container
+                            spacing={1}
+                            alignItems="center"
+                            justifyContent={["center"]}
+                            >
+                                <Grid item>
+                                    <IconButton>
+                                        <LinkedIn />
+                                    </IconButton>
+                                </Grid>
+                                <Grid item>
+                                    <IconButton>
+                                        <GitHub />
+                                    </IconButton>
+                                </Grid>
+                                <Grid item>
+                                    <IconButton>
+                                        <Mail />
+                                    </IconButton>
+                                </Grid>
+                            </Grid>
                         </Box>
                     </AppBar>
                 </footer>
