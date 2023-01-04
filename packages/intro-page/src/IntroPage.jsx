@@ -4,8 +4,8 @@ import { Typography, Grid, Box, Fade, Container } from "@mui/material";
 
 export const IntroPage = () => {
   const ImageMyStyle = {
-    width: "230px",
-    height: null,
+    maxWidth: "230px",
+    maxHeight: "230px",
     flex: 1,
     resizeMode: "contain",
   };
@@ -29,13 +29,24 @@ export const IntroPage = () => {
         >
           <Container>
             <Fade in={fadeIn} timeout={2000}>
-              <Grid container justifyContent="center">
-                <Grid item xs={4}>
+              <Grid container spacing={4} justifyContent="center">
+                <Grid
+                  item
+                  xs={12}
+                  sm={4}
+                  style={{
+                    justifyContent: "center",
+                    resizeMode: "contain",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
                   <img style={ImageMyStyle} src={Profile} alt="ProfilePic" />
                 </Grid>
                 <Grid
                   item
-                  xs={4}
+                  flexGrow={1}
+                  xs={6}
                   style={{
                     justifyContent: "center",
                     display: "flex",
