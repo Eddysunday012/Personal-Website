@@ -1,7 +1,6 @@
 import React from "react";
 import {
   AppBar,
-  Grid,
   Typography,
   Button,
   ThemeProvider,
@@ -9,10 +8,15 @@ import {
   IconButton,
   Box,
   Chip,
+  Menu,
+  MenuItem,
+  Toolbar,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
-export const Menu = () => {
+const pages = ["About", "Skills", "Projects", "Contact"];
+
+export const Navbar = () => {
   const theme = createTheme({
     typography: {
       button: {
@@ -34,67 +38,46 @@ export const Menu = () => {
   return (
     <ThemeProvider theme={theme}>
       <header>
-        <AppBar sx={{ minHeight: 70 }} aria-label="Navbar" className="Navbar">
-          <Grid
-            container
-            alignContent="center"
-            justifyContent="left"
-            spacing={1}
-            sx={{
-              margin: "auto",
-            }}
-          >
-            <Grid
-              item
-              style={{ textAlign: "right" }}
-              sx={{ m: 0.5, display: { xs: "none", sm: "none", md: "flex" } }}
-              xs={1}
+        <AppBar
+          sx={{ minHeight: 70, maxHeight: 70 }}
+          aria-label="Navbar"
+          className="Navbar"
+        >
+          <Toolbar disableGutters>
+            <Box
+              sx={{
+                my: "auto",
+                mx: 2,
+                flexGrow: 1,
+                display: { xs: "flex", md: "none" },
+              }}
             >
-              <Button variant="text">
-                <Typography align="center">About</Typography>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                color="inherit"
+              >
+                <MenuIcon />
+              </IconButton>
+            </Box>
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+              {pages.map((page) => (
+                <Button
+                  key={page}
+                  sx={{ m: 2, color: "white", display: "block" }}
+                >
+                  <Typography>{page}</Typography>
+                </Button>
+              ))}
+            </Box>
+            <Box sx={{ flexGrow: 0 }}>
+              <Button>
+                <Chip sx={{ px: 1, mr: 4 }} label="Resume" />
               </Button>
-            </Grid>
-            <Grid
-              item
-              style={{ textAlign: "right" }}
-              sx={{ m: 0.5, display: { xs: "none", sm: "none", md: "flex" } }}
-              xs={1}
-            >
-              <Button variant="text">
-                <Typography align="center">Skills</Typography>
-              </Button>
-            </Grid>
-            <Grid
-              item
-              style={{ textAlign: "right" }}
-              sx={{ m: 0.5, display: { xs: "none", sm: "none", md: "flex" } }}
-              xs={1}
-            >
-              <Button variant="text">
-                <Typography align="center">Projects</Typography>
-              </Button>
-            </Grid>
-            <Grid
-              item
-              style={{ textAlign: "right" }}
-              sx={{ m: 0.5, display: { xs: "none", sm: "none", md: "flex" } }}
-              xs={1}
-            >
-              <Button variant="text">
-                <Typography align="center">Contact</Typography>
-              </Button>
-            </Grid>
-            <Grid item sx={{ display: { xs: 1, sm: 1, md: "none" } }}>
-              <Box sx={{ m: 1 }}>
-                <IconButton sx={{ margin: "auto" }}>
-                  <MenuIcon sx={{ fontSize: 25, color: "white" }} />
-                </IconButton>
-              </Box>
-            </Grid>
-            <Grid item xs={3} md={3} sx={{ m: 1 }}>
-              <Chip label="Resume" />
-            </Grid>
-          </Grid>
+            </Box>
+          </Toolbar>
         </AppBar>
       </header>
     </ThemeProvider>
