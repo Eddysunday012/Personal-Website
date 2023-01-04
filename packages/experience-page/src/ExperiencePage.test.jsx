@@ -13,4 +13,14 @@ describe("Testing suite for Experience Page", async () => {
       </DependenciesContext.Provider>
     );
   });
+
+  it("Should have a label for experience", async () => {
+    render(
+      <DependenciesContext.Provider value={{ experience, Skills }}>
+        <ExperiencePage />
+      </DependenciesContext.Provider>
+    );
+    const findLabel = await screen.findByLabelText("Experience");
+    expect(findLabel).toBeTruthy();
+  });
 });
