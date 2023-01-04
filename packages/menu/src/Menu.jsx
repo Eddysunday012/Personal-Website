@@ -47,7 +47,7 @@ export const Navbar = () => {
             <Box
               sx={{
                 my: "auto",
-                mx: 2,
+                mx: 4,
                 flexGrow: 1,
                 display: { xs: "flex", md: "none" },
               }}

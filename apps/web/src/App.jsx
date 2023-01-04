@@ -5,7 +5,6 @@ import { AboutPage } from "about-page";
 import { ProjectPage } from "projects-page";
 import { SkillsPage } from "skills-page";
 import { Footer } from "footer";
-import { Grid } from "@mui/material";
 
 import Profile from "./assets/Profile.png";
 import projects from "./data/projects.json";
