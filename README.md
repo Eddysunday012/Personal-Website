@@ -8,9 +8,9 @@ In short, this is a personal website I have created that is designed to go hand 
 
 ## Setting up
 
-The fully functioning site can be found here through this link:
+The fully functioning site can be found here through this [link](https://eddysunday012-eddysunday012.vercel.app/):
 
-[Not yet deployed, but will have the link once deployed! Enjoy this link to my actual resume for now :)](https://drive.google.com/file/d/1zV0kPQiyrihOHfKjWvvLu1_F07zzshCx/view?usp=sharing)
+https://eddysunday012-eddysunday012.vercel.app/
 
 To run this on a local machine, follow these primary steps for setup
 
