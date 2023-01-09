@@ -5,17 +5,22 @@ import { AboutPage } from "about-page";
 import { ProjectPage } from "projects-page";
 import { SkillsPage } from "skills-page";
 import { Footer } from "footer";
+import { ExperiencePage } from "experience-page";
 
 import Profile from "./assets/Profile.png";
 import projects from "./data/projects.json";
 import { Skills } from "./data/Skills";
+import { experience } from "./data/experience";
 
 function App() {
   return (
-    <DependenciesContext.Provider value={{ Profile, projects, Skills }}>
+    <DependenciesContext.Provider
+      value={{ Profile, projects, Skills, experience }}
+    >
       <Navbar />
       <IntroPage />
       <AboutPage />
+      <ExperiencePage />
       <SkillsPage />
       <ProjectPage />
       <Footer />

@@ -68,7 +68,7 @@ export const ExperiencePage = () => {
             </Typography>
             <Grid container spacing={3} justifyContent="center">
               {experience.map((exp) => (
-                <ExperienceBox exp={exp} key={exp.Name} />
+                <ExperienceBox exp={exp} key={exp.name} />
               ))}
             </Grid>
           </Box>
