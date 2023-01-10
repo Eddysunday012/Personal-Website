@@ -5,7 +5,7 @@ import { Grid, Box, Container, Typography } from "@mui/material";
 export const ExperiencePage = () => {
   const ExperienceBox = ({ exp }) => {
     return (
-      <Grid item xs={4} style={{ textAlign: "center" }} sx={{ m: 2 }}>
+      <Grid item xs={8} md={4} style={{ textAlign: "center" }} sx={{ m: 2 }}>
         <Box
           display="flex-start"
           alignItems="stretch"
