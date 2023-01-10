@@ -12,10 +12,20 @@ import projects from "./data/projects.json";
 import { Skills } from "./data/Skills";
 import { experience } from "./data/experience";
 
+const scrollFn = (pageName) => {
+  const navbarHeight = document.getElementById("Navbar").offsetHeight + 10;
+  console.log(navbarHeight);
+  const page = document.getElementById(pageName);
+  if (page) {
+    page.scrollIntoView();
+    window.scrollBy(0, -navbarHeight);
+  }
+};
+
 function App() {
   return (
     <DependenciesContext.Provider
-      value={{ Profile, projects, Skills, experience }}
+      value={{ Profile, projects, Skills, experience, scrollFn }}
     >
       <Navbar />
       <IntroPage />

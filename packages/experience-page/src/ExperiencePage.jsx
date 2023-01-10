@@ -60,6 +60,7 @@ export const ExperiencePage = () => {
         <Container sx={{ mt: 1, mb: 2 }}>
           <Box
             aria-label="Experience"
+            id="Experience"
             sx={{ backgroundColor: "#bab8b8", borderRadius: "12px", p: 1 }}
             alignContent="center"
           >

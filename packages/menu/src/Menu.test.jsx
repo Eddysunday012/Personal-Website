@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { Navbar } from "./Menu";
+import { DependenciesContext } from "dependenciescontext";
 import React from "react";
 
 describe("Tests for menu", () => {
@@ -24,5 +25,18 @@ describe("Tests for menu", () => {
     expect(skills).toBeTruthy();
     expect(projects).toBeTruthy();
     expect(contact).toBeTruthy();
+  });
+
+  it("after button click, it should scroll down", async () => {
+    const scrollFn = vi.fn();
+    render(
+      <DependenciesContext.Provider value={{ scrollFn }}>
+        <Navbar />
+      </DependenciesContext.Provider>
+    );
+    const about = document.getElementById("AboutButton");
+    about.click();
+    expect(scrollFn).toBeCalledTimes(1);
+    expect(scrollFn).toHaveBeenCalledWith("About");
   });
 });

@@ -6,6 +6,7 @@ export const AboutPage = () => {
     <Container sx={{ mb: 2, mt: 2 }}>
       <Box
         sx={{ backgroundColor: "#bab8b8", borderRadius: "10px" }}
+        id="About"
         aria-label="About Me"
       >
         <Container sx={{ p: 3 }}>

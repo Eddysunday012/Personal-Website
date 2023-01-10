@@ -39,7 +39,8 @@ export const SkillsPage = () => {
       {({ Skills }) => (
         <Container sx={{ mt: 2, mb: 2 }}>
           <Box
-            aria-label="Projects"
+            aria-label="Skills"
+            id="Skills"
             sx={{ backgroundColor: "#bab8b8", borderRadius: "12px", p: 1 }}
           >
             <Container sx={{ p: 1 }}>

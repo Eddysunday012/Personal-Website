@@ -30,6 +30,7 @@
     "@mui/icons-material": "*",
     "@mui/material": "*",
     "framer-motion": "^7.5.3",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "dependenciescontext": "*"
   }
 }
