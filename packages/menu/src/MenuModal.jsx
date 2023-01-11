@@ -1,34 +1,30 @@
 import React from "react";
 import { DependenciesContext } from "dependenciescontext";
 import {
-  Grid,
-  Menu,
-  Toolbar,
-  Modal,
-  Typography,
   Drawer,
   List,
   ListItem,
   ListItemButton,
+  ListItemText,
 } from "@mui/material";
 
 export const NavbarModal = () => {
-  const ListButton = ({ page, index }) => {
+  const ListButton = ({ page }) => {
     return (
       <ListItemButton>
-        <Typography>{page}</Typography>
+        <ListItemText>{page}</ListItemText>
       </ListItemButton>
     );
   };
 
   return (
     <DependenciesContext.Consumer>
-      {({ pageList }) => (
-        <Drawer open={true}>
+      {({ pageList, toggleDrawer, setToggleDrawer }) => (
+        <Drawer open={toggleDrawer} anchor={"left"} onClose={setToggleDrawer}>
           <List>
-            {pageList.map((page, index) => (
+            {pageList.map((page) => (
               <ListItem key={page}>
-                <ListButton page={page} index={index} />
+                <ListButton page={page} />
               </ListItem>
             ))}
           </List>
