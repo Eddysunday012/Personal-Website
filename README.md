@@ -2,6 +2,8 @@
 
 My very own personal website!
 
+<img width="1512" alt="Screenshot 2023-01-12 at 1 22 43 PM" src="https://user-images.githubusercontent.com/30426558/212184142-6a1f959e-a613-4a5f-895b-a27a0d0260a0.png">
+
 ## What is this?
 
 In short, this is a personal website I have created that is designed to go hand in hand with my resume.
