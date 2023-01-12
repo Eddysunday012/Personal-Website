@@ -46,7 +46,8 @@ export const IntroPage = () => {
                 <Grid
                   item
                   flexGrow={1}
-                  xs={6}
+                  xs={12}
+                  sm={6}
                   style={{
                     justifyContent: "center",
                     display: "flex",
