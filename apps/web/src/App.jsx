@@ -1,4 +1,6 @@
+import React, { useEffect } from "react";
 import { Navbar } from "menu";
+import { NavbarModal } from "menu";
 import { DependenciesContext } from "dependenciescontext";
 import { IntroPage } from "intro-page";
 import { AboutPage } from "about-page";
@@ -12,6 +14,8 @@ import projects from "./data/projects.json";
 import { Skills } from "./data/Skills";
 import { experience } from "./data/experience";
 
+const pageList = ["About", "Skills", "Projects", "Contact"];
+
 const scrollFn = (pageName) => {
   const navbarHeight = document.getElementById("Navbar").offsetHeight + 10;
   console.log(navbarHeight);
@@ -23,11 +27,36 @@ const scrollFn = (pageName) => {
 };
 
 function App() {
+  const [toggleDrawer, setDrawer] = React.useState(false);
+
+  // React.useEffect(() => {
+  //   setDrawer(false);
+  // }, []);
+
+  const setToggleDrawer = () => {
+    setDrawer(true);
+  };
+
+  const closeToggleDrawer = () => {
+    setDrawer(false);
+  };
+
   return (
     <DependenciesContext.Provider
-      value={{ Profile, projects, Skills, experience, scrollFn }}
+      value={{
+        Profile,
+        projects,
+        Skills,
+        experience,
+        scrollFn,
+        toggleDrawer,
+        setToggleDrawer,
+        pageList,
+        closeToggleDrawer,
+      }}
     >
       <Navbar />
+      <NavbarModal />
       <IntroPage />
       <AboutPage />
       <ExperiencePage />

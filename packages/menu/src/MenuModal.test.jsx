@@ -5,14 +5,14 @@ import { DependenciesContext } from "dependenciescontext";
 
 describe("Test Suite for Menu Modal", () => {
   const pageList = ["About", "Skills", "Projects", "Contact"];
-  let setToggleDrawer = vi.fn();
+  let closeToggleDrawer = vi.fn();
   let toggleDrawer;
 
   it("should render properly", async () => {
     toggleDrawer = true;
     render(
       <DependenciesContext.Provider
-        value={{ pageList, toggleDrawer, setToggleDrawer }}
+        value={{ pageList, toggleDrawer, closeToggleDrawer }}
       >
         <NavbarModal />
       </DependenciesContext.Provider>
@@ -23,7 +23,7 @@ describe("Test Suite for Menu Modal", () => {
     toggleDrawer = true;
     render(
       <DependenciesContext.Provider
-        value={{ pageList, toggleDrawer, setToggleDrawer }}
+        value={{ pageList, toggleDrawer, closeToggleDrawer }}
       >
         <NavbarModal />
       </DependenciesContext.Provider>
@@ -36,18 +36,19 @@ describe("Test Suite for Menu Modal", () => {
   });
 
   it("buttons in modal should call toggle drawer", async () => {
-    setToggleDrawer = vi.fn();
+    closeToggleDrawer = vi.fn();
     toggleDrawer = true;
     render(
       <DependenciesContext.Provider
-        value={{ pageList, toggleDrawer, setToggleDrawer }}
+        value={{ pageList, toggleDrawer, closeToggleDrawer }}
       >
         <NavbarModal />
       </DependenciesContext.Provider>
     );
 
-    const aboutButton = screen.getByRole("button", { name: pageList[0] });
+    const aboutButton = screen.getByRole("button", { name: /about/i });
+    console.log(aboutButton);
     aboutButton.click();
-    expect(setToggleDrawer).toBeCalledTimes(1);
+    expect(closeToggleDrawer).toBeCalledTimes(1);
   });
 });

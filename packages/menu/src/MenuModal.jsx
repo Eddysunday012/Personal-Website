@@ -9,22 +9,16 @@ import {
 } from "@mui/material";
 
 export const NavbarModal = () => {
-  const ListButton = ({ page, setToggleDrawer }) => {
-    return (
-      <ListItemButton onClick={setToggleDrawer}>
-        <ListItemText>{page}</ListItemText>
-      </ListItemButton>
-    );
-  };
-
   return (
     <DependenciesContext.Consumer>
-      {({ pageList, toggleDrawer, setToggleDrawer }) => (
-        <Drawer open={toggleDrawer} anchor={"left"} onClose={setToggleDrawer}>
+      {({ pageList, toggleDrawer, closeToggleDrawer }) => (
+        <Drawer open={toggleDrawer} anchor={"left"}>
           <List>
             {pageList.map((page) => (
               <ListItem key={page}>
-                <ListButton page={page} setToggleDrawer={setToggleDrawer} />
+                <ListItemButton onClick={closeToggleDrawer}>
+                  <ListItemText>{page}</ListItemText>
+                </ListItemButton>
               </ListItem>
             ))}
           </List>
