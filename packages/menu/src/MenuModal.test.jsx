@@ -5,7 +5,7 @@ import { DependenciesContext } from "dependenciescontext";
 
 describe("Test Suite for Menu Modal", () => {
   const pageList = ["About", "Skills", "Projects", "Contact"];
-  const setToggleDrawer = vi.fn();
+  let setToggleDrawer = vi.fn();
   let toggleDrawer;
 
   it("should render properly", async () => {
@@ -29,14 +29,15 @@ describe("Test Suite for Menu Modal", () => {
       </DependenciesContext.Provider>
     );
 
-    pageList.forEach(async (page) => {
-      let findPage = await screen.findByText(page);
+    for await (const page of pageList) {
+      let findPage = screen.findByText(page);
       expect(findPage).toBeTruthy();
-    });
+    }
   });
 
-  it("should not show if toggleDrawer is false", async () => {
-    toggleDrawer = false;
+  it("buttons in modal should call toggle drawer", async () => {
+    setToggleDrawer = vi.fn();
+    toggleDrawer = true;
     render(
       <DependenciesContext.Provider
         value={{ pageList, toggleDrawer, setToggleDrawer }}
@@ -45,9 +46,8 @@ describe("Test Suite for Menu Modal", () => {
       </DependenciesContext.Provider>
     );
 
-    pageList.forEach(async (page) => {
-      let findPage = await screen.findByText(page);
-      expect(findPage).not.toBeTruthy();
-    });
+    const aboutButton = screen.getByRole("button", { name: pageList[0] });
+    aboutButton.click();
+    expect(setToggleDrawer).toBeCalledTimes(1);
   });
 });

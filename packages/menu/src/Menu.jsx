@@ -38,7 +38,7 @@ export const Navbar = () => {
 
   return (
     <DependenciesContext.Consumer>
-      {({ scrollFn }) => (
+      {({ scrollFn, setToggleDrawer }) => (
         <ThemeProvider theme={theme}>
           <header>
             <AppBar
@@ -58,10 +58,11 @@ export const Navbar = () => {
                 >
                   <IconButton
                     size="large"
-                    aria-label="account of current user"
+                    aria-label="toggle-drawer"
                     aria-controls="menu-appbar"
                     aria-haspopup="true"
                     color="inherit"
+                    onClick={setToggleDrawer}
                   >
                     <MenuIcon />
                   </IconButton>

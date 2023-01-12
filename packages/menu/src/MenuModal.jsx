@@ -9,9 +9,9 @@ import {
 } from "@mui/material";
 
 export const NavbarModal = () => {
-  const ListButton = ({ page }) => {
+  const ListButton = ({ page, setToggleDrawer }) => {
     return (
-      <ListItemButton>
+      <ListItemButton onClick={setToggleDrawer}>
         <ListItemText>{page}</ListItemText>
       </ListItemButton>
     );
@@ -24,7 +24,7 @@ export const NavbarModal = () => {
           <List>
             {pageList.map((page) => (
               <ListItem key={page}>
-                <ListButton page={page} />
+                <ListButton page={page} setToggleDrawer={setToggleDrawer} />
               </ListItem>
             ))}
           </List>
