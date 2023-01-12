@@ -47,7 +47,6 @@ describe("Test Suite for Menu Modal", () => {
     );
 
     const aboutButton = screen.getByRole("button", { name: /about/i });
-    console.log(aboutButton);
     aboutButton.click();
     expect(closeToggleDrawer).toBeCalledTimes(1);
   });
