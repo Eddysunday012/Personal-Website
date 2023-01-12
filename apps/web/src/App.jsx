@@ -29,15 +29,14 @@ const scrollFn = (pageName) => {
 function App() {
   const [toggleDrawer, setDrawer] = React.useState(false);
 
-  // React.useEffect(() => {
-  //   setDrawer(false);
-  // }, []);
-
   const setToggleDrawer = () => {
     setDrawer(true);
   };
 
-  const closeToggleDrawer = () => {
+  const closeToggleDrawer = (pageName) => {
+    if (pageName) {
+      scrollFn(pageName);
+    }
     setDrawer(false);
   };
 

@@ -16,7 +16,11 @@ export const NavbarModal = () => {
           <List>
             {pageList.map((page) => (
               <ListItem key={page}>
-                <ListItemButton onClick={closeToggleDrawer}>
+                <ListItemButton
+                  onClick={() => {
+                    closeToggleDrawer(page);
+                  }}
+                >
                   <ListItemText>{page}</ListItemText>
                 </ListItemButton>
               </ListItem>
