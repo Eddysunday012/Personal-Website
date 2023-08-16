@@ -23,7 +23,6 @@ export const IntroPage = () => {
           sx={{
             display: "flex",
             height: "100vh",
-            backgroundColor: "white",
             alignItems: "center",
           }}
         >
@@ -54,12 +53,22 @@ export const IntroPage = () => {
                     flexDirection: "column",
                   }}
                 >
-                  <Typography align="center" variant="h5" width="100%">
+                  <Typography
+                    align="center"
+                    variant="h5"
+                    width="100%"
+                    sx={{ color: "white", margin: 0.5 }}
+                  >
                     Hello there! My name is Ethan Domingo
                   </Typography>
-                  <Typography align="center" variant="body1" width="100%">
-                    I'm a software engineer based in Santa Cruz, CA. Scroll down
-                    to learn more about me!
+                  <Typography
+                    align="center"
+                    variant="body1"
+                    width="100%"
+                    sx={{ color: "white", margin: 0.5 }}
+                  >
+                    I'm a software engineer based in Los Angeles, CA. <br />
+                    Scroll down to learn more about me!
                   </Typography>
                 </Grid>
               </Grid>

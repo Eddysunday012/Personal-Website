@@ -1,7 +1,7 @@
 [
     {
-        "Name": "React Project",
-        "Descriptions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Name": "Personal Website",
+        "Descriptions": "A Personal Website I built using React and Javascript! Designed with a monorepo architecture using TurboRepo!",
         "Link": "link.to.somewhere.com",
         "Icon": {
             "Type": "icon",
@@ -10,48 +10,8 @@
         }
     },
     {
-        "Name": "Java Project",
-        "Descriptions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Link": "link.to.somewhere.com",
-        "Icon": {
-            "Type": "icon",
-            "Icon": "ComputerIcon",
-            "Link": null
-        }
-    },
-    {
-        "Name": "Python Project",
-        "Descriptions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Link": "link.to.somewhere.com",
-        "Icon": {
-            "Type": "icon",
-            "Icon": "ComputerIcon",
-            "Link": null
-        }
-    },
-    {
-        "Name": "Python Project",
-        "Descriptions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Link": "link.to.somewhere.com",
-        "Icon": {
-            "Type": "icon",
-            "Icon": "ComputerIcon",
-            "Link": null
-        }
-    },
-    {
-        "Name": "Python Project",
-        "Descriptions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Link": "link.to.somewhere.com",
-        "Icon": {
-            "Type": "icon",
-            "Icon": "ComputerIcon",
-            "Link": null
-        }
-    },
-    {
-        "Name": "Python Project",
-        "Descriptions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Name": "Online Chess",
+        "Descriptions": "My capstone project where I designed a real time online chess game using threejs and react! Also with a monorepo architecture using TurboRepo",
         "Link": "link.to.somewhere.com",
         "Icon": {
             "Type": "icon",

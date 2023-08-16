@@ -19,7 +19,7 @@ export const Footer = () => {
         <footer>
           <AppBar position="sticky" sx={{ top: "auto", bottom: 0, mt: 3 }}>
             <Box
-              sx={{ p: 3, backgroundColor: "#8ba3c4" }}
+              sx={{ p: 3, backgroundColor: "#4b6666" }}
               maxWidth
               justifyContent={"center"}
             >
@@ -33,12 +33,12 @@ export const Footer = () => {
                 justifyContent={["center"]}
               >
                 <Grid item>
-                  <IconButton>
+                  <IconButton href="https://www.linkedin.com/in/ethan-domingo-5a84b5196/">
                     <LinkedIn />
                   </IconButton>
                 </Grid>
                 <Grid item>
-                  <IconButton>
+                  <IconButton href="https://github.com/Eddysunday012">
                     <GitHub />
                   </IconButton>
                 </Grid>

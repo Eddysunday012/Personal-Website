@@ -5,37 +5,29 @@ export const AboutPage = () => {
   return (
     <Container sx={{ mb: 2, mt: 2 }}>
       <Box
-        sx={{ backgroundColor: "#bab8b8", borderRadius: "10px" }}
+        sx={{ backgroundColor: "#5A5A5A", borderRadius: "10px" }}
         id="About"
         aria-label="About Me"
       >
         <Container sx={{ p: 3 }}>
-          <Typography variant="h5" sx={{ pt: 1, pb: 1 }}>
+          <Typography variant="h5" sx={{ pt: 1, pb: 1, color: "#EEEEEE" }}>
             About Me
           </Typography>
-          <Typography variant="body1" sx={{ pb: 1 }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          <Typography variant="body1" sx={{ pb: 1, color: "#EEEEEE" }}>
+            Greetings and welcome to my personal page! I'm Ethan Domingo, a
+            recent computer science graduate from UC Santa Cruz with a passion
+            for crafting innovative solutions through code. Equipped with a
+            degree in computer science and a minor in statistics, I'm thrilled
+            to embark on the next chapter of my journey in the realm of software
+            engineering. My main interests in Computer Science include Software
+            Engineering, AI, Machine Learning, Data Science, Network Programming
+            and Backend Development.
           </Typography>
-          <Typography variant="body1" sx={{ pb: 1 }}>
-            Mattis enim ut tellus elementum. Nec tincidunt praesent semper
-            feugiat nibh sed pulvinar. Morbi tempus iaculis urna id volutpat
-            lacus laoreet non curabitur. Sit amet consectetur adipiscing elit
-            pellentesque. Donec ac odio tempor orci dapibus ultrices in.
-            Pharetra diam sit amet nisl suscipit adipiscing. Nibh tellus
-            molestie nunc non blandit massa enim nec dui. Pellentesque id nibh
-            tortor id aliquet lectus proin. Dictum varius duis at consectetur
-            lorem donec. Elit duis tristique sollicitudin nibh. Rhoncus dolor
-            purus non enim praesent elementum. Sed turpis tincidunt id aliquet
-            risus. Odio eu feugiat pretium nibh ipsum consequat nisl. Bibendum
-            neque egestas congue quisque egestas diam in arcu cursus. Lacus
-            suspendisse faucibus interdum posuere. Vitae suscipit tellus mauris
-            a diam maecenas.
+          <Typography variant="body1" sx={{ pb: 1, color: "#EEEEEE" }}>
+            I am actively seeking software engineering opportunities, and I am
+            currently working towards a AWS Solutions Architect certification.
+            Feel free to scroll down and learn more about me, whether it be my
+            experiences and skillsets to even my personal interests and hobbies!
           </Typography>
         </Container>
       </Box>

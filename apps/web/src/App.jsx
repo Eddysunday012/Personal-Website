@@ -14,10 +14,14 @@ import projects from "./data/projects.json";
 import { Skills } from "./data/Skills";
 import { experience } from "./data/experience";
 
+import { Container } from "@mui/material";
+import { CssVarsProvider } from "@mui/joy";
+
 const pageList = ["About", "Skills", "Projects", "Contact"];
+const OFFSET = 10;
 
 const scrollFn = (pageName) => {
-  const navbarHeight = document.getElementById("Navbar").offsetHeight + 10;
+  const navbarHeight = document.getElementById("Navbar").offsetHeight + OFFSET;
   console.log(navbarHeight);
   const page = document.getElementById(pageName);
   if (page) {
@@ -54,14 +58,22 @@ function App() {
         closeToggleDrawer,
       }}
     >
-      <Navbar />
-      <NavbarModal />
-      <IntroPage />
-      <AboutPage />
-      <ExperiencePage />
-      <SkillsPage />
-      <ProjectPage />
-      <Footer />
+      <Container
+        maxWidth={false}
+        sx={{
+          backgroundColor: "#333333",
+          width: "100%",
+        }}
+      >
+        <Navbar />
+        <NavbarModal />
+        <IntroPage />
+        <AboutPage />
+        <ExperiencePage />
+        <SkillsPage />
+        <ProjectPage />
+        <Footer />
+      </Container>
     </DependenciesContext.Provider>
   );
 }

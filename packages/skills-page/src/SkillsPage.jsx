@@ -5,26 +5,22 @@ import {
   Grid,
   Box,
   Container,
-  // List,
-  // ListItem,
-  // ListItemText,
   LinearProgress,
   Chip,
 } from "@mui/material";
-// import { LinearProgressProps } from "@mui/material/LinearProgress";
 
 const SkillSection = ({ Skill }) => {
   return (
     <Container sx={{ m: 1 }}>
-      <Typography variant="body1" sx={{ p: 1 }}>
+      <Typography variant="body1" sx={{ p: 1, color: "#EEEEEE" }}>
         {Skill.Name}
       </Typography>
       <LinearProgress
         variant="determinate"
         value={Skill.Percentage}
-        sx={{ m: 1, p: 0.1 }}
+        sx={{ m: 1, p: 0.1, color: "white" }}
       />
-      <Chip label={Skill.Type} sx={{ mt: 2 }} size="small" />
+      <Chip label={Skill.Type} sx={{ mt: 2 }} size="small" color="primary" />
     </Container>
   );
 };
@@ -41,10 +37,14 @@ export const SkillsPage = () => {
           <Box
             aria-label="Skills"
             id="Skills"
-            sx={{ backgroundColor: "#bab8b8", borderRadius: "12px", p: 1 }}
+            sx={{ backgroundColor: "#5A5A5A", borderRadius: "12px", p: 1 }}
           >
             <Container sx={{ p: 1 }}>
-              <Typography variant="h5" sx={{ pb: 1 }} align="center">
+              <Typography
+                variant="h5"
+                sx={{ pb: 1, color: "#EEEEEE" }}
+                align="center"
+              >
                 Skills
               </Typography>
               <Grid container>

@@ -17,7 +17,7 @@ export const ProjectPage = () => {
           display="flex-start"
           alignItems="stretch"
           sx={{
-            backgroundColor: "#919090",
+            backgroundColor: "#314f4f",
             borderRadius: "14px",
             height: "100%",
           }}
@@ -30,7 +30,7 @@ export const ProjectPage = () => {
               flexDirection: "column",
             }}
           >
-            <Typography variant="body1" sx={{ p: 1 }}>
+            <Typography variant="body1" sx={{ p: 1, color: "#EEEEEE" }}>
               {project["Name"]}
             </Typography>
             <Avatar variant="circle" sx={{ mt: 2, mb: 2 }}>
@@ -38,7 +38,7 @@ export const ProjectPage = () => {
                 <TerminalOutlined />
               </Icon>
             </Avatar>
-            <Typography variant="body2" sx={{ p: 1 }}>
+            <Typography variant="body2" sx={{ p: 1, color: "#EEEEEE" }}>
               {project["Descriptions"]}
             </Typography>
           </Container>
@@ -54,10 +54,10 @@ export const ProjectPage = () => {
           <Box
             aria-label="Projects"
             id="Projects"
-            sx={{ backgroundColor: "#bab8b8", borderRadius: "12px", p: 1 }}
+            sx={{ backgroundColor: "#5A5A5A", borderRadius: "12px", p: 1 }}
           >
             <Container sx={{ p: 1 }}>
-              <Typography variant="h5" sx={{ pb: 1 }}>
+              <Typography variant="h5" sx={{ pb: 1, color: "#EEEEEE" }}>
                 Projects
               </Typography>
               <Grid container spacing={1.5}>

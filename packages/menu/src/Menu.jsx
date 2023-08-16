@@ -31,7 +31,7 @@ export const Navbar = () => {
     },
     palette: {
       primary: {
-        main: "#255F85",
+        main: "#2f4f4f",
       },
     },
   });
@@ -81,7 +81,11 @@ export const Navbar = () => {
                 </Box>
                 <Box sx={{ flexGrow: 0 }}>
                   <Button>
-                    <Chip sx={{ px: 1, mr: 4 }} label="Resume" />
+                    <Chip
+                      sx={{ px: 1, mr: 4 }}
+                      label="Resume"
+                      color="primary"
+                    />
                   </Button>
                 </Box>
               </Toolbar>

@@ -10,7 +10,7 @@ export const ExperiencePage = () => {
           display="flex-start"
           alignItems="stretch"
           sx={{
-            backgroundColor: "#919090",
+            backgroundColor: "#314f4f",
             borderRadius: "14px",
             height: "100%",
           }}
@@ -23,19 +23,24 @@ export const ExperiencePage = () => {
               flexDirection: "column",
             }}
           >
-            <Typography variant="body1" sx={{ p: 1 }}>
+            <Typography variant="body1" sx={{ p: 1, color: "#EEEEEE" }}>
               {exp.name}
             </Typography>
             <Typography
               variant="body2"
-              style={{ textAlign: "left" }}
+              style={{ textAlign: "left", color: "#EEEEEE" }}
               sx={{ pb: 1 }}
             >
               {exp.description}
             </Typography>
             <Container>
               <Typography
-                sx={{ wordBreak: "break-word", pb: 1 }}
+                sx={{
+                  wordBreak: "break-word",
+                  pb: 1,
+                  fontWeight: "bold",
+                  color: "#EEEEEE",
+                }}
                 align="center"
                 variant="subtitle2"
               >
@@ -61,10 +66,13 @@ export const ExperiencePage = () => {
           <Box
             aria-label="Experience"
             id="Experience"
-            sx={{ backgroundColor: "#bab8b8", borderRadius: "12px", p: 1 }}
+            sx={{ backgroundColor: "#5A5A5A", borderRadius: "12px", p: 1 }}
             alignContent="center"
           >
-            <Typography variant="h5" sx={{ pb: 1, textAlign: "center" }}>
+            <Typography
+              variant="h5"
+              sx={{ pb: 1, textAlign: "center", color: "#EEEEEE" }}
+            >
               Experience
             </Typography>
             <Grid container spacing={3} justifyContent="center">
