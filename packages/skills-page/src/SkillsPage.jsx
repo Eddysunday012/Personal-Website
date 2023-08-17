@@ -18,9 +18,24 @@ const SkillSection = ({ Skill }) => {
       <LinearProgress
         variant="determinate"
         value={Skill.Percentage}
-        sx={{ m: 1, p: 0.1, color: "white" }}
+        sx={{
+          m: 1,
+          p: 0.1,
+          backgroundColor: "#b0d9d9",
+          "& .MuiLinearProgress-barColorPrimary": {
+            backgroundColor: "#314f4f", // Customize the color of the completed portion
+          },
+        }}
       />
-      <Chip label={Skill.Type} sx={{ mt: 2 }} size="small" color="primary" />
+      <Chip
+        label={Skill.Type}
+        sx={{
+          mt: 2,
+          backgroundColor: "#325454",
+          color: "#EEEEEE",
+        }}
+        size="small"
+      />
     </Container>
   );
 };

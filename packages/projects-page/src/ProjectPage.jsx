@@ -1,6 +1,14 @@
 import React from "react";
 import { DependenciesContext } from "dependenciescontext";
-import { Container, Grid, Box, Typography, Icon, Avatar } from "@mui/material";
+import {
+  Container,
+  Grid,
+  Box,
+  Typography,
+  Icon,
+  Avatar,
+  Button,
+} from "@mui/material";
 import { TerminalOutlined } from "@mui/icons-material";
 
 /**
@@ -29,18 +37,29 @@ export const ProjectPage = () => {
               display: "flex",
               flexDirection: "column",
             }}
+            sx={{ p: 1 }}
           >
             <Typography variant="body1" sx={{ p: 1, color: "#EEEEEE" }}>
               {project["Name"]}
             </Typography>
-            <Avatar variant="circle" sx={{ mt: 2, mb: 2 }}>
+            <Avatar
+              variant="circle"
+              sx={{ m: 1, p: 0.2, backgroundColor: "#333333" }}
+            >
               <Icon>
                 <TerminalOutlined />
               </Icon>
             </Avatar>
-            <Typography variant="body2" sx={{ p: 1, color: "#EEEEEE" }}>
+            <Typography variant="body2" sx={{ m: 1, color: "#EEEEEE" }}>
               {project["Descriptions"]}
             </Typography>
+            <Button
+              variant="contained"
+              href={project["Link"]}
+              sx={{ mt: 1, mb: 2 }}
+            >
+              Check it out here
+            </Button>
           </Container>
         </Box>
       </Grid>
@@ -57,7 +76,10 @@ export const ProjectPage = () => {
             sx={{ backgroundColor: "#5A5A5A", borderRadius: "12px", p: 1 }}
           >
             <Container sx={{ p: 1 }}>
-              <Typography variant="h5" sx={{ pb: 1, color: "#EEEEEE" }}>
+              <Typography
+                variant="h5"
+                sx={{ pb: 1, color: "#EEEEEE", textAlign: "center" }}
+              >
                 Projects
               </Typography>
               <Grid container spacing={1.5}>
@@ -70,6 +92,21 @@ export const ProjectPage = () => {
                 ))}
               </Grid>
             </Container>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: 8,
+                marginBottom: 2,
+              }}
+            >
+              <Typography
+                variant="body1"
+                sx={{ textAlign: "center", color: "#EEEEEE" }}
+              >
+                And more to come!
+              </Typography>
+            </div>
           </Box>
         </Container>
       )}

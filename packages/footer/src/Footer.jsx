@@ -34,17 +34,17 @@ export const Footer = () => {
               >
                 <Grid item>
                   <IconButton href="https://www.linkedin.com/in/ethan-domingo-5a84b5196/">
-                    <LinkedIn />
+                    <LinkedIn sx={{ color: "white" }} />
                   </IconButton>
                 </Grid>
                 <Grid item>
                   <IconButton href="https://github.com/Eddysunday012">
-                    <GitHub />
+                    <GitHub sx={{ color: "white" }} />
                   </IconButton>
                 </Grid>
                 <Grid item>
                   <IconButton>
-                    <Mail />
+                    <Mail sx={{ color: "white" }} />
                   </IconButton>
                 </Grid>
               </Grid>

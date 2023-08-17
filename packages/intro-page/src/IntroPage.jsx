@@ -1,6 +1,14 @@
 import React from "react";
 import { DependenciesContext } from "dependenciescontext";
-import { Typography, Grid, Box, Fade, Container } from "@mui/material";
+import {
+  Typography,
+  Grid,
+  Box,
+  Fade,
+  Container,
+  IconButton,
+} from "@mui/material";
+import { LinkedIn, GitHub, Mail } from "@mui/icons-material";
 
 export const IntroPage = () => {
   const ImageMyStyle = {
@@ -27,7 +35,7 @@ export const IntroPage = () => {
           }}
         >
           <Container>
-            <Fade in={fadeIn} timeout={2000}>
+            <Fade in={fadeIn} timeout={3000}>
               <Grid container spacing={4} justifyContent="center">
                 <Grid
                   item
@@ -70,6 +78,28 @@ export const IntroPage = () => {
                     I'm a software engineer based in Los Angeles, CA. <br />
                     Scroll down to learn more about me!
                   </Typography>
+                  <Grid
+                    container
+                    spacing={1}
+                    alignItems="center"
+                    justifyContent={["center"]}
+                  >
+                    <Grid item>
+                      <IconButton href="https://www.linkedin.com/in/ethan-domingo-5a84b5196/">
+                        <LinkedIn sx={{ color: "white" }} />
+                      </IconButton>
+                    </Grid>
+                    <Grid item>
+                      <IconButton href="https://github.com/Eddysunday012">
+                        <GitHub sx={{ color: "white" }} />
+                      </IconButton>
+                    </Grid>
+                    <Grid item>
+                      <IconButton>
+                        <Mail sx={{ color: "white" }} />
+                      </IconButton>
+                    </Grid>
+                  </Grid>
                 </Grid>
               </Grid>
             </Fade>
