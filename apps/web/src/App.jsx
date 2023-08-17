@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import "./scrollbar.css";
+
 import { Navbar } from "menu";
 import { NavbarModal } from "menu";
 import { DependenciesContext } from "dependenciescontext";
