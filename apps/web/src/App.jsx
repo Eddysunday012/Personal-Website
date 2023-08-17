@@ -15,7 +15,7 @@ import { Skills } from "./data/Skills";
 import { experience } from "./data/experience";
 
 import { Container } from "@mui/material";
-import { CssVarsProvider } from "@mui/joy";
+import { Box } from "@mui/material";
 
 const pageList = ["About", "Skills", "Projects", "Contact"];
 const OFFSET = 10;
@@ -58,22 +58,27 @@ function App() {
         closeToggleDrawer,
       }}
     >
-      <Container
-        maxWidth={false}
+      <Box
         sx={{
           backgroundColor: "#333333",
-          width: "100%",
+          minHeight: "100vh", // Ensure the background color covers the full viewport height
+          display: "flex",
+          flexDirection: "column", // Align children vertically
+          overflowX: "hidden",
+          margin: -1,
         }}
       >
         <Navbar />
         <NavbarModal />
-        <IntroPage />
-        <AboutPage />
-        <ExperiencePage />
-        <SkillsPage />
-        <ProjectPage />
+        <Container maxWidth={false} sx={{ flex: "1 0 auto" }}>
+          <IntroPage />
+          <AboutPage />
+          <ExperiencePage />
+          <SkillsPage />
+          <ProjectPage />
+        </Container>
         <Footer />
-      </Container>
+      </Box>
     </DependenciesContext.Provider>
   );
 }

@@ -16,8 +16,17 @@ export const Footer = () => {
   return (
     <DependenciesContext.Consumer>
       {() => (
-        <footer>
-          <AppBar position="sticky" sx={{ top: "auto", bottom: 0, mt: 3 }}>
+        <footer style={{ position: "sticky", bottom: 0, margin: 0 }}>
+          <AppBar
+            position="sticky"
+            sx={{
+              bottom: 0,
+              mt: 3,
+              scrollbarGutter: "unset",
+              margin: 0,
+              padding: 0,
+            }}
+          >
             <Box
               sx={{ p: 3, backgroundColor: "#4b6666" }}
               maxWidth
