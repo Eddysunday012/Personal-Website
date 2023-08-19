@@ -12,13 +12,27 @@ describe("Testing suite for Contact Page", () => {
     );
   });
 
-  it("should have all the forms rendered", async () => {
+  it("should have a box rendered", async () => {
     render(
       <DependenciesContext.Provider>
         <ContactPage />
       </DependenciesContext.Provider>
     );
-    const form = await screen.findByLabelText("Email Input");
-    expect(form).toBeTruthy();
+    const foundBox = await screen.findByLabelText("Contact Box");
+    expect(foundBox).toBeTruthy();
+  });
+
+  it("should have all input areas found", async () => {
+    render(
+      <DependenciesContext.Provider>
+        <ContactPage />
+      </DependenciesContext.Provider>
+    );
+
+    const foundEmailInput = await screen.findByLabelText("Email Input");
+    expect(foundEmailInput).toBeTruthy();
+
+    const foundMessageInput = await screen.findByLabelText("Message Input");
+    expect(foundMessageInput).toBeTruthy();
   });
 });
