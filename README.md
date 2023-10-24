@@ -10,7 +10,7 @@ In short, this is a personal website I have created that is designed to go hand 
 
 ## Setting up
 
-The fully functioning site can be found here through this [link](https://eddysunday012-eddysunday012.vercel.app/):
+The fully functioning site can be found here through this [link](https://ethandomingo.com/):
 
 https://eddysunday012-eddysunday012.vercel.app/
 
