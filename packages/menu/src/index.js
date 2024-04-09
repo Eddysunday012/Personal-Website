@@ -1,3 +1,4 @@
 import { Navbar } from "./Menu";
 import { NavbarModal } from "./MenuModal";
-export { Navbar, NavbarModal };
+import { ResumeModal } from "./ResumeModal";
+export { Navbar, NavbarModal, ResumeModal };
