@@ -24,6 +24,7 @@
   },
   "packageManager": "yarn@1.22.19",
   "dependencies": {
+    "eslint-config-custom": "*",
     "@chakra-ui/react": "^2.4.3",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.11.0",

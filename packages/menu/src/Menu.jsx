@@ -36,7 +36,7 @@ export const Navbar = () => {
 
   return (
     <DependenciesContext.Consumer>
-      {({ scrollFn, setToggleDrawer }) => (
+      {({ scrollFn, setToggleDrawer, handleResume }) => (
         <ThemeProvider theme={theme}>
           <header>
             <AppBar
@@ -78,7 +78,7 @@ export const Navbar = () => {
                   ))}
                 </Box>
                 <Box sx={{ flexGrow: 0 }}>
-                  <Button>
+                  <Button onClick={handleResume}>
                     <Chip
                       sx={{ px: 1, mr: 4 }}
                       label="Resume"
