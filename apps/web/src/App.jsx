@@ -15,7 +15,7 @@ import projects from "./data/projects.json";
 import { Skills } from "./data/Skills";
 import { experience } from "./data/experience";
 import { Container } from "@mui/material";
-import { Modal, Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Resume from "./assets/Resume_Ethan_Domingo.pdf";
 
 const pageList = ["About", "Skills", "Projects", "Contact"];

@@ -3,6 +3,12 @@ import { DependenciesContext } from "dependenciescontext";
 import { Grid, Box, Container, Typography } from "@mui/material";
 
 export const ExperiencePage = () => {
+  const ImageMyStyle = {
+    maxWidth: "230px",
+    maxHeight: "230px",
+    flex: 1,
+    resizeMode: "contain",
+  };
   const ExperienceBox = ({ exp }) => {
     return (
       <Grid item xs={8} md={4} style={{ textAlign: "center" }} sx={{ m: 2 }}>
