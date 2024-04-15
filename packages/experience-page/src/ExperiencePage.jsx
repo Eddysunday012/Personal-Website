@@ -4,10 +4,10 @@ import { Grid, Box, Container, Typography } from "@mui/material";
 
 export const ExperiencePage = () => {
   const ImageMyStyle = {
-    maxWidth: "230px",
-    maxHeight: "230px",
+    maxHeight: "130px",
     flex: 1,
     resizeMode: "contain",
+    margin: 20,
   };
   const ExperienceBox = ({ exp }) => {
     return (
@@ -29,36 +29,37 @@ export const ExperiencePage = () => {
               flexDirection: "column",
             }}
           >
-            <Typography variant="body1" sx={{ p: 1, color: "#EEEEEE" }}>
+            <img style={ImageMyStyle} src={exp.logo.src} alt="ExpLogo" />
+            <Typography variant="body1" sx={{ mb: 2, color: "#EEEEEE" }}>
               {exp.name}
             </Typography>
-            <Typography
-              variant="body2"
-              style={{ textAlign: "left", color: "#EEEEEE" }}
-              sx={{ pb: 1 }}
-            >
-              {exp.description}
-            </Typography>
-            <Container>
-              <Typography
-                sx={{
-                  wordBreak: "break-word",
-                  pb: 1,
-                  fontWeight: "bold",
-                  color: "#EEEEEE",
-                }}
-                align="center"
-                variant="subtitle2"
-              >
-                {exp.skills.map((skill, index) => {
-                  if (index != exp.skills.length - 1) {
-                    return skill + ", ";
-                  } else {
-                    return skill;
-                  }
-                })}
-              </Typography>
-            </Container>
+            {/* <Typography */}
+            {/*   variant="body2" */}
+            {/*   style={{ textAlign: "left", color: "#EEEEEE" }} */}
+            {/*   sx={{ pb: 1 }} */}
+            {/* > */}
+            {/*   {exp.description} */}
+            {/* </Typography> */}
+            {/* <Container> */}
+            {/*   <Typography */}
+            {/*     sx={{ */}
+            {/*       wordBreak: "break-word", */}
+            {/*       pb: 1, */}
+            {/*       fontWeight: "bold", */}
+            {/*       color: "#EEEEEE", */}
+            {/*     }} */}
+            {/*     align="center" */}
+            {/*     variant="subtitle2" */}
+            {/*   > */}
+            {/*     {exp.skills.map((skill, index) => { */}
+            {/*       if (index != exp.skills.length - 1) { */}
+            {/*         return skill + ", "; */}
+            {/*       } else { */}
+            {/*         return skill; */}
+            {/*       } */}
+            {/*     })} */}
+            {/*   </Typography> */}
+            {/* </Container> */}
           </Container>
         </Box>
       </Grid>
