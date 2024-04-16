@@ -71,7 +71,7 @@ export const IntroPage = () => {
                   </Typography>
                   <Typography
                     align="center"
-                    variant="body1"
+                    variant="body2"
                     width="100%"
                     sx={{ color: "white", margin: 0.5 }}
                   >
@@ -95,7 +95,11 @@ export const IntroPage = () => {
                       </IconButton>
                     </Grid>
                     <Grid item>
-                      <IconButton>
+                      <IconButton
+                        href="mailto:ethanddomingo@gmail.com"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
                         <Mail sx={{ color: "white" }} />
                       </IconButton>
                     </Grid>
