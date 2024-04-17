@@ -73,14 +73,19 @@ export const Navbar = () => {
                       id={page + "Button"}
                       onClick={() => scrollFn(page)}
                     >
-                      <Typography>{page}</Typography>
+                      <Typography variant="h1">{page}</Typography>
                     </Button>
                   ))}
                 </Box>
                 <Box sx={{ flexGrow: 0 }}>
                   <Button onClick={handleResume}>
                     <Chip
-                      sx={{ px: 1, mr: 4 }}
+                      sx={{
+                        px: 1,
+                        mr: 4,
+                        backgroundColor: "white",
+                        color: "black",
+                      }}
                       label="Resume"
                       color="primary"
                     />

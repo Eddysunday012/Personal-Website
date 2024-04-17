@@ -42,26 +42,8 @@ export const ExperiencePage = () => {
             >
               {exp.dates}
             </Typography>
-            {/* <Typography */}
-            {/*   variant="body2" */}
-            {/*   style={{ textAlign: "center", color: "#EEEEEE" }} */}
-            {/*   sx={{ pb: 2 }} */}
-            {/* > */}
-            {/*   {exp.description} */}
-            {/* </Typography> */}
 
             <Container sx={{ p: 2 }}>
-              {/* <Typography */}
-              {/*   variant="body1" */}
-              {/*   sx={{ */}
-              {/*     textAlign: "left", */}
-              {/*     pb: 1, */}
-              {/*     color: "#EEEEEE", */}
-              {/*     fontWeight: "bold", */}
-              {/*   }} */}
-              {/* > */}
-              {/*   Tasks: */}
-              {/* </Typography> */}
               {exp.tasks.map((task) => {
                 return (
                   <Typography
