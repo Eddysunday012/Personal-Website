@@ -20,10 +20,10 @@ const SkillSection = ({ Skill }) => {
         value={Skill.Percentage}
         sx={{
           m: 1,
-          p: 0.1,
-          backgroundColor: "#b0d9d9",
+          p: 0.3,
+          backgroundColor: "#f0fafa",
           "& .MuiLinearProgress-barColorPrimary": {
-            backgroundColor: "#314f4f", // Customize the color of the completed portion
+            backgroundColor: "#338282", // Customize the color of the completed portion
           },
         }}
       />
@@ -31,7 +31,7 @@ const SkillSection = ({ Skill }) => {
         label={Skill.Type}
         sx={{
           mt: 2,
-          backgroundColor: "#325454",
+          backgroundColor: "#4c7d7d",
           color: "#EEEEEE",
         }}
         size="small"
@@ -64,7 +64,7 @@ export const SkillsPage = () => {
               </Typography>
               <Grid container>
                 {Skills.map((Skill, index) => (
-                  <Grid item key={`Skill${index}`} xs={6}>
+                  <Grid item key={`Skill${index}`} md={4} xs={12}>
                     <SkillSection Skill={Skill} />
                   </Grid>
                 ))}

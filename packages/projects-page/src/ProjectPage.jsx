@@ -19,7 +19,7 @@ import { TerminalOutlined } from "@mui/icons-material";
 export const ProjectPage = () => {
   const ProjectBox = ({ project, label }) => {
     return (
-      <Grid item xs={6} style={{ textAlign: "center" }}>
+      <Grid item md={6} xs={12} style={{ textAlign: "center" }}>
         <Box
           aria-label={label}
           display="flex-start"
