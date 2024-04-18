@@ -7,12 +7,35 @@ import {
   ListItemButton,
   ListItemText,
   Box,
+  ThemeProvider,
+  createTheme,
+  Button,
+  Chip,
+  Container,
 } from "@mui/material";
 
 export const NavbarModal = () => {
+  const theme = createTheme({
+    typography: {
+      button: {
+        textTransform: "none",
+      },
+      allVariants: {
+        color: "white",
+        fontFamily: "Roboto",
+        fontSize: 20,
+      },
+    },
+    palette: {
+      primary: {
+        main: "#2f4f4f",
+      },
+    },
+  });
+
   return (
     <DependenciesContext.Consumer>
-      {({ pageList, toggleDrawer, closeToggleDrawer }) => (
+      {({ pageList, toggleDrawer, closeToggleDrawer, handleResume }) => (
         <Drawer
           open={toggleDrawer}
           anchor={"left"}
@@ -34,6 +57,34 @@ export const NavbarModal = () => {
                 </ListItem>
               ))}
             </List>
+            <ThemeProvider theme={theme}>
+              <Container
+                sx={{
+                  mt: 1,
+                  alignItems: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <Button
+                  onClick={() => {
+                    closeToggleDrawer();
+                    handleResume();
+                  }}
+                >
+                  <Chip
+                    sx={{
+                      mt: 1,
+                      px: 1,
+                      backgroundColor: "white",
+                      color: "black",
+                    }}
+                    label="Resume"
+                    color="primary"
+                  />
+                </Button>
+              </Container>
+            </ThemeProvider>
           </Box>
         </Drawer>
       )}
