@@ -1,22 +1,25 @@
 [
-    {
-        "Name": "Personal Website",
-        "Descriptions": "A Personal Website I built using React and Javascript! Designed with a monorepo architecture using TurboRepo!",
-        "Link": "https://github.com/Eddysunday012/Personal-Website",
-        "Icon": {
-            "Type": "icon",
-            "Icon": "ComputerIcon",
-            "Link": null
-        }
+  {
+    "Name": "Personal Website",
+    "Descriptions": "A Personal Website I built using React and Javascript! Designed with a monorepo architecture using TurboRepo!",
+    "Link": "https://github.com/Eddysunday012/Personal-Website",
+    "Icon": {
+      "Type": "icon",
+      "Icon": "ComputerIcon",
+      "Link": null
     },
-    {
-        "Name": "Online Chess",
-        "Descriptions": "My capstone project where I designed a real time online chess game using threejs and react! Also with a monorepo architecture using TurboRepo",
-        "Link": "https://github.com/Lonye/Online_Chess",
-        "Icon": {
-            "Type": "icon",
-            "Icon": "ComputerIcon",
-            "Link": null
-        }
-    }
+    "Topics": ["React", "Material UI", "Javascript", "Python"]
+  },
+  {
+    "Name": "Online Chess",
+    "Descriptions": "My capstone project where I designed a real time online chess game using threejs and react! Also with a monorepo architecture using TurboRepo",
+    "Link": "https://github.com/Lonye/Online_Chess",
+    "Icon": {
+      "Type": "icon",
+      "Icon": "ComputerIcon",
+      "Link": null
+    },
+    "Topics": ["React", "Material UI", "Javascript", "Python"]
+  }
 ]
+

@@ -1,2 +1,2 @@
-import githubCLient from "./githubClient";
-export { githubCLient };
+import { githubClient } from "./githubClient";
+export { githubClient };
