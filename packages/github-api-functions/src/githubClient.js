@@ -8,15 +8,17 @@ export class githubClient {
         throw new Error(`Error fetching repos: ${response.status}`);
       }
       const data = await response.json();
+      data.sort((a, b) => b.size - a.size);
       const repos = [];
       data.forEach((repo) => {
-        if (repo.stargazers_count > 0) {
+        if (repos.length < 6) {
           repos.push({
             name: repo.name,
             url: repo.html_url,
             description: repo.description,
             stargazers_count: repo.stargazers_count,
             language: repo.language,
+            size: repo.size,
           });
         }
       });
