@@ -6,18 +6,18 @@ My very own personal website!
 
 ## What is this?
 
-In short, this is a personal website I have created that is designed to go hand in hand with my resume.
+This is the personal website I built for myself.
 
 ## Setting up
 
 The fully functioning site can be found here through this [link](https://ethandomingo.com/):
 
-https://eddysunday012-eddysunday012.vercel.app/
+https://ethandomingo.com/
 
 To run this on a local machine, follow these primary steps for setup
 
-0. Have Python 3.6+ and Java 11+
-1. Install Node.js (v16.18.1) and npm
+0. Have Python 3.6+
+1. Install Node.js (v16+) and npm
 2. Install Yarn: `npm install --global yarn`
 3. Install npm dependencies: `yarn`
 
@@ -33,7 +33,7 @@ In no particular order:
 
 - JavaScript
 - React
-- Chakra UI
+- Material UI
 - npm, yarn, turborepo
 - Vitest
 - Prettier (code styling)
